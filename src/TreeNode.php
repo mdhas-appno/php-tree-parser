@@ -53,7 +53,7 @@ class TreeNode implements \JsonSerializable, \ArrayAccess
      * which is a value of any type other than a resource.
      * @since 5.4.0
      */
-    public function jsonSerialize()
+    public function jsonSerialize():mixed
     {
         $properties = get_object_vars($this);
 
@@ -74,7 +74,7 @@ class TreeNode implements \JsonSerializable, \ArrayAccess
      * The return value will be casted to boolean if non-boolean was returned.
      * @since 5.0.0
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->$offset);
     }
@@ -88,7 +88,7 @@ class TreeNode implements \JsonSerializable, \ArrayAccess
      * @return mixed Can return all value types.
      * @since 5.0.0
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): bool
     {
         return $this->$offset;
     }
@@ -105,7 +105,7 @@ class TreeNode implements \JsonSerializable, \ArrayAccess
      * @return void
      * @since 5.0.0
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         $this->$offset = $value;
     }
@@ -119,7 +119,7 @@ class TreeNode implements \JsonSerializable, \ArrayAccess
      * @return void
      * @since 5.0.0
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->$offset);
     }

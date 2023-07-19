@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class TreeParserTest extends TestCase
 {
-    public function test_parsing_tree()
+    public function test_parsing_tree(): void
     {
         $tree = <<<TREE
   Root
@@ -27,7 +27,7 @@ TREE;
         $this->assertEquals(file_get_contents(__DIR__.'/fixtures/expected_parsed_tree.json'), json_encode($root, JSON_PRETTY_PRINT));
     }
 
-    public function test_setting_node_parent()
+    public function test_setting_node_parent(): void
     {
         $tree = <<<TREE
   Root
@@ -55,7 +55,7 @@ TREE;
         $this->assertEquals($root, $lastItem->parent->parent->parent->parent);
     }
 
-    public function test_validating_number_of_spaces()
+    public function test_validating_number_of_spaces(): void
     {
         $this->expectException(InvalidNumberOfSpaces::class);
         $tree = <<<TREE
@@ -67,7 +67,7 @@ TREE;
         $parser->parse();
     }
 
-    public function test_setting_custom_indentation()
+    public function test_setting_custom_indentation(): void
     {
         $tree = <<<TREE
   Root
