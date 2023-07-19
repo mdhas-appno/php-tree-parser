@@ -1,6 +1,6 @@
 <?php
 
-namespace BaoPham\TreeParser;
+namespace mdhas\TreeParser;
 
 class TreeParser
 {
