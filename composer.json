@@ -1,14 +1,18 @@
 {
-    "name": "baopham/tree-parser",
+    "name": "mdhas-appno/php-tree-parser",
     "type": "library",
     "description": "Parse tree structure",
     "keywords": [
         "baopham",
         "tree-parser"
     ],
-    "homepage": "https://github.com/baopham/tree-parser",
+    "homepage": "https://github.com/mdhas-appno/php-tree-parser",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Mark Dhas",
+            "email": "mark.dhas@gmail.com"
+        },
         {
             "name": "Bao Pham",
             "email": "gbaopham@gmail.com",
